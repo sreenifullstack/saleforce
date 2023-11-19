@@ -19,7 +19,7 @@ const FormWrapper = ({ children }) => {
         <p className="table-cell w-2/3">
           Default value will be used if test value is empty
         </p>
-        <div className="table-cell text-right">
+        <div className="table-cell text-right whitespace-nowrap">
           <select
             name="latency"
             id="latency"

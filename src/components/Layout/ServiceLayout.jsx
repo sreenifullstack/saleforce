@@ -87,7 +87,7 @@ const sampleWidgets = [
 
 const ServiceList = ({ data }) => {
   const { addToTab } = useTab();
-  addToTab(data[0]);
+
   return (
     <div>
       <ul className="">

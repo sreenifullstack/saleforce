@@ -4,6 +4,7 @@ import { MainLayout } from "../components/Layout";
 import { Services } from "../features/services";
 import { ServiceLayout } from "../components/Layout";
 import { TabProvider } from "../provider/TabProvider";
+import { Dashboard } from "../features/dashboard/Dashboard";
 
 export const Router = () => {
   const elements = useRoutes([
@@ -13,7 +14,7 @@ export const Router = () => {
       children: [
         {
           index: true,
-          element: <>Home Screen</>,
+          element: <Dashboard />,
         },
         {
           path: "/services",
