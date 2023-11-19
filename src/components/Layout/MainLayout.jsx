@@ -54,26 +54,24 @@ const navigation = [
     return (
       <>
         <div className=" w-full h-full flex flex-row">
-          <div className="w-14 h-full bg-indigo-800">
+          <div className="w-12 h-full bg-indigo-800">
             <ul className="w-full">
               {navigation.map(({ id, icon: Icon, link }) => {
                 return (
-                  
-                    <li key={id} className="w-14">
-                      <NavLink to={link}>
-                        {({ isActive }) => (
-                          <Icon
-                            className={clsx(
-                              "p-3 stroke-1",
-                              isActive
-                                ? "stroke-white bg-indigo-900"
-                                : "stroke-gray-200"
-                            )}
-                          />
-                        )}
-                      </NavLink>
-                    </li>   
-                
+                  <li key={id} className="w-12">
+                    <NavLink to={link}>
+                      {({ isActive }) => (
+                        <Icon
+                          className={clsx(
+                            "p-3 stroke-1",
+                            isActive
+                              ? "stroke-white bg-indigo-900"
+                              : "stroke-gray-200"
+                          )}
+                        />
+                      )}
+                    </NavLink>
+                  </li>
                 );
               })}
             </ul>

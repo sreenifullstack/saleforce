@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { MainLayout } from "../components/Layout";
 import { Services } from "../features/services";
 import { ServiceLayout } from "../components/Layout";
-
+import { TabProvider } from "../provider/TabProvider";
 
 export const Router = () => {
   const elements = useRoutes([
@@ -12,18 +12,24 @@ export const Router = () => {
       Component: MainLayout,
       children: [
         {
-            index:true,
-            element:<>Home Screen</>
+          index: true,
+          element: <>Home Screen</>,
         },
         {
           path: "/services",
-          element: <ServiceLayout/>,
-          children:[
+          element: (
+            <>
+              <TabProvider>
+                <ServiceLayout />
+              </TabProvider>
+            </>
+          ),
+          children: [
             {
-                index:true,
-                element:<Services/>
-            }
-          ]
+              index: true,
+              element: <Services />,
+            },
+          ],
         },
         {
           path: "/category",
@@ -45,13 +51,13 @@ export const Router = () => {
     },
   ]);
 
-//   const testRoute = useRoutes([
-//     {path : "/" ,  
-//     Component:ServiceLayout,
-//     children:[{
-//         index:'/',
-//         element:<>Service Element</>
-//     }] }
-//   ])
+  //   const testRoute = useRoutes([
+  //     {path : "/" ,
+  //     Component:ServiceLayout,
+  //     children:[{
+  //         index:'/',
+  //         element:<>Service Element</>
+  //     }] }
+  //   ])
   return <> {elements}</>;
 };
