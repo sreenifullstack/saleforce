@@ -54,7 +54,7 @@ export const Services = () => {
 
   return (
     <>
-      <div className="p-2 px-4 pt-3 bg-white  border border-red-500">
+      <div className="p-2 px-4 pt-3 bg-gray-100 ">
         <MultiTabs tabItems={tabItems} removeTab={removeFromTab}>
           {(data) => {
             console.log(data);

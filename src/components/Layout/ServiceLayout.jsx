@@ -127,7 +127,7 @@ const Widgets = ({ widget }) => {
 
 const ServiceWrapper = ({ children }) => {
   return (
-    <div className="px-2 border border-green-900 h-full">
+    <div className="px-2  h-full">
       <div className="flex place-items-center pt-1  mb-1">
         <CiSettings className=" w-4 h-4  mr-1" />
         <h1 className="flex-1  font-semibold text-sm"> All Services </h1>
@@ -144,7 +144,7 @@ export const ServiceLayout = () => {
   return (
     <>
       <div className="flex h-full text-sm ">
-        <div className=" w-52 flex flex-col h-full border border-green-400">
+        <div className=" w-52 flex flex-col h-full ">
           <div className="h-12">
             <Widgets widget={sampleWidgets} />
           </div>
