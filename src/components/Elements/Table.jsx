@@ -11,7 +11,7 @@ const tableData = [
     defaultValue: "",
     dataType: "string",
     encode: "encode",
-    description: '<input type="checkbox">',
+    description: "monospace",
   },
   {
     Box: '<input type="checkbox">',
@@ -21,7 +21,7 @@ const tableData = [
     defaultValue: "",
     dataType: "float",
     encode: "encode",
-    description: '<input type="checkbox">',
+    description: "monospace",
   },
   {
     Box: "None",

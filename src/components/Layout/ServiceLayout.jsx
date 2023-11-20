@@ -8,7 +8,7 @@ import { List } from "../Details";
 import { Details } from "../Details";
 import { useDispatch, useSelector } from "react-redux";
 import { addServices, apiService } from "../../store/ApiServiceSlice";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useTab } from "../../provider/TabProvider";
 
 const sampleData = [
@@ -87,7 +87,7 @@ const sampleWidgets = [
 
 const ServiceList = ({ data }) => {
   const { addToTab } = useTab();
-
+  
   return (
     <div>
       <ul className="">
@@ -139,11 +139,11 @@ const ServiceWrapper = ({ children }) => {
 };
 
 export const ServiceLayout = () => {
-  const services = useSelector((state) => state.apiService);
+  const services = useSelector((state) => state[apiService]);
 
   return (
     <>
-      <div className="flex h-full text-sm ">
+      <div className="flex min-content h-full text-sm ">
         <div className=" w-52 flex flex-col h-full ">
           <div className="h-12">
             <Widgets widget={sampleWidgets} />
