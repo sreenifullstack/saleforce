@@ -6,7 +6,7 @@ const DataType = {
 export const List = ({ type = "json", title, ...props }) => {
   let Icon = DataType[type];
   return (
-    <div className="inline-block cursor-help " {...props}>
+    <div className="inline-block cursor-pointer" {...props}>
       <Icon className=" mr-1 inline" />
       <span className="text-base">{title}</span>
     </div>

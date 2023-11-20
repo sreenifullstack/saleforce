@@ -8,7 +8,7 @@ import { List } from "../Details";
 import { Details } from "../Details";
 import { useDispatch, useSelector } from "react-redux";
 import { addServices, apiService } from "../../store/ApiServiceSlice";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTab } from "../../provider/TabProvider";
 
 const sampleData = [

@@ -10,17 +10,18 @@ export const SingleService = ({ data }) => {
                 id="name"
                 className="mt-1 border px-2 py-1 focus:border-gray-400 focus:outline-0"
                 type="string"
-                defaultValue={"title"}
+                defaultValue={data?.title}
               />
             </div>
 
             <div className="flex w-2/5 flex-col whitespace-nowrap">
               <label htmlFor="name"> Operationl Security Level </label>
-              <input
-                id="name"
-                className="mt-1 border px-2 py-1 focus:border-gray-400 focus:outline-0"
-                type="string"
-              />
+              
+                <select  className="mt-1 border px-2 py-1 focus:border-gray-400 focus:outline-0" defaultValue={"Authenticated"} disabled >
+                  <option value="Authenticated"> Authenticated User Only </option>
+                </select>
+              
+             
             </div>
           </div>
 

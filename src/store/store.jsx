@@ -3,6 +3,6 @@ import ApiServiceReducer, { apiService } from "./ApiServiceSlice";
 
 export const store = configureStore({
   reducer: {
-    [apiService]: ApiServiceReducer,
+    apiService: ApiServiceReducer,
   },
 });

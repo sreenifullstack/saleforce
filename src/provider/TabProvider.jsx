@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const TabContext = createContext({
   tabItems: [],
@@ -7,8 +7,9 @@ const TabContext = createContext({
 });
 
 const TabProvider = ({ children }) => {
-  const [tabItems, setTabItems] = useState([
-    {
+  const [tabItems, setTabItems] = useState([]);
+  useEffect(()=>{
+    setTabItems( [{
       id: "357c178e-dff3-47fd-9aa0-ad2f9f4f0bb4",
       title: "rest api 2",
       services: [
@@ -36,7 +37,25 @@ const TabProvider = ({ children }) => {
         },
       ],
     },
-  ]);
+    {
+      id: "191960cb-acc6-43fa-9790-ef291b0ec0c7",
+      title: "rest api 3",
+      services: [
+        {
+          id: "e8f5ee85-5b0d-4173-b3e0-bf39d87dbf35",
+          box: 3,
+          name: "Date 5",
+          value: "date",
+          testValue: "2023-11-19",
+          defaultValue: "",
+          dataType: "date",
+          encode: "decode",
+          description: '<input type="checkbox">',
+        },
+      ],
+    },
+  ])
+  },[])
 
   const addToTab = (item) => {
     let tab = [...tabItems].filter((tab) => tab.id === item.id);

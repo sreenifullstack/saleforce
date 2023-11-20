@@ -25,10 +25,10 @@ const FormWrapper = ({ children }) => {
             id="latency"
             className="text-xs  px-2 py-1 rounded   border border-gray-400"
           >
-            <option selected value="m1005">
+            <option defaultValue={"default"} disabled value="m1005">
               m1000548797
             </option>
-            <option value="m1005">m6000548797</option>
+            <option value="default">m6000548797</option>
           </select>
 
           <button className=" ml-2 px-2 py-1 bg-indigo-900 text-white text-sm font-semibold rounded">
