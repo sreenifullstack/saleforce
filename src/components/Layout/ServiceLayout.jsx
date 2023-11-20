@@ -139,7 +139,7 @@ const ServiceWrapper = ({ children }) => {
 };
 
 export const ServiceLayout = () => {
-  const services = useSelector((state) => state[apiService]);
+  const services = useSelector((state) => state.apiService);
 
   return (
     <>
