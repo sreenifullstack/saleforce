@@ -64,7 +64,7 @@ const getLocalStorage = (key) => {
 
 const setLocalStorage = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
-  return data;
+  return value;
 };
 
 const getInitialValue = () => {
